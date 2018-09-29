@@ -238,7 +238,7 @@
 .gs-navbar logreg.active > a,
 .gs-navbar logreg.active > a:hover,
 .gs-navbar logreg.active > a:focus {
-	color: #ffffff;
+	color: #000;
 	cursor: default;
 	}
 .gs-navbar logreg a {
@@ -259,6 +259,6 @@
 	line-height: 23px;
 	}
 .gs-navbar logreg a:hover {
-	color: #fff;
+	color: #000;
 	text-decoration: none;
 	}
