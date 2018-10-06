@@ -17,13 +17,14 @@
            <link rel='stylesheet' href='vendor.css'>
            <link rel='stylesheet' href='theme_black_red.css' id="theme">
            <link rel='stylesheet' href='div.css'>
+           <meta name="viewport" content="width=device-width, initial-scale=1" />
 <style>
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
 </style>
-        
+
     <meta http-equiv="cache-control" content="max-age=0">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">
@@ -33,14 +34,14 @@
 
     </head>
     <body onLoad="scrlsts()">
-        
+
        <div class="loading">
       <div id="wrapper">
          <div id="main">
             <header id="header">
 			   <h2><font color="#fff" size="4" class="unselectable"><span id="doc_time">date_data</span> <br></font></h2>
                <h1><font class="unselectable">ZeRo</font><font color="#d9adff">1337</font></h1>
-               
+
                <h2><font color="#fff" size="3" class="unselectable">the official site</font></h2>
                <nav>
 			   <font color="#00fff" size="2" class="unselectable">
@@ -65,10 +66,10 @@
         background-color: black;
         background-size: cover;
         position: fixed;
-        
+
     }
-    
-    
+
+
 .btn
 {
     padding: 4px;
@@ -78,14 +79,22 @@
     text-align: center;
     border-color: purple;
     border-style: outset;
-    
-    
+
+
     }
-    
-    
-    
-    
-    
+
+
+    @viewport {
+      width: device-width ;
+      zoom: 1.0 ;
+    }
+
+
+    @media screen and(max-width:320px) {
+      
+    }
+
+
     a:link {
         color: white;
     }
@@ -98,7 +107,7 @@
     a:active {
         color: white;
     }
-    
+
     .hvr-grow-rotate {
       display: inline-block;
       vertical-align: middle;
@@ -115,9 +124,9 @@
     margin-right: 900;
     font-family: fantasy;
     text-align: center;
-    
-    
-    
+
+
+
 }
     .hvr-grow-rotate:hover, .hvr-grow-rotate:focus, .hvr-grow-rotate:active {
   -webkit-transform: scale(1.1) rotate(4deg);
@@ -128,16 +137,16 @@
     margin-right: 900;
     font-family: fantasy;
     text-align: center;
-    
-    
+
+
 }
-    
+
     .active {
         font-size: 50;
         margin: auto;
         padding: auto;
     }
-    
+
 btn1
 {
     padding: 0;
@@ -147,26 +156,26 @@ btn1
     font-family:fantasy;
     text-align: center;
     background-color: purple;
-    
-    
-    
+
+
+
 
 }
-    
+
         </style>
-        
+
         <script type="text/javascript">
       function clock() {
       var d = new Date();
       var hours = d.getHours();
       var minutes = d.getMinutes();
       var seconds = d.getSeconds();
-      
-      
+
+
       if (hours <= 9) hours = "0" + hours;
       if (minutes <= 9) minutes = "0" + minutes;
       if (seconds <= 9) seconds = "0" + seconds;
-      
+
       date_time = hours + ":" + minutes + ":" + seconds;
       if (document.layers) {
        document.layers.doc_time.document.write(date_time);
@@ -217,7 +226,7 @@ return days[d.getDay()]+' '+months[d.getMonth()]+' '+d.getDate()+' '+d.getFullYe
                   return false;
               }
           }
-      var message=":o";      
+      var message=":o";
       function clickIE() {if (document.all) {(message);return false;}}
       function clickNS(e) {if
       (document.layers||(document.getElementById&&!document.all)) {
@@ -261,7 +270,7 @@ return days[d.getDay()]+' '+months[d.getMonth()]+' '+d.getDate()+' '+d.getFullYe
       return true;
       }
    </script>
-   
+
    <script language="JavaScript">
         //////////F12 disable code////////////////////////
         document.onkeypress = function(event) {
@@ -276,23 +285,24 @@ return days[d.getDay()]+' '+months[d.getMonth()]+' '+d.getDate()+' '+d.getFullYe
                 truncated 2034 bytes...
     </script>
 
-        
-        
-        
-         <br> <br> <br> <br> <br> <br> <br> <br> <br> 
-        
+
+
+
+         <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+
         <div class="btn">
-        <font size="8" color="black"><form action="login.php" method="POST">
+        <?php include('login.php') ?>
+        <font size="6" color="black"><form action="login.php" method="POST">
         <input type="submit" value = "   Log In   ">
             </form></font></div>
-<br> <br><br> <br>  
+<br> <br>
             <div class="btn">
-        <font color="black" size="8"><form action="register.php" method="POST">
+            <?php include('register.php') ?>
+        <font color="black" size="6"><form action="register.php" method="POST">
         <input type="submit" value = " Sign Up ">
             </form></font></div>
         <br><br><br><br><br><br><br><br><br><br><br><br>
-        <li class="active"><a href="index.html"><i class="fa fa-home"></i></a></li>
-        
+
     </body>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </html>
