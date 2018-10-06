@@ -197,8 +197,8 @@ var d = new Date(),
     hours = d.getHours().toString().length == 1 ? '0'+d.getHours() : d.getHours(),
     ampm = d.getHours() >= 12 ? 'pm' : 'am',
     months = ['January','Febuary','March','April','May','June','July','August','September','October','November','December'],
-    days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-return days[d.getDay()]+' '+months[d.getMonth()]+' '+d.getDate()+' '+d.getFullYear();
+    days = ['Sunday,','Monday,','Tuesday,','Wednesday,','Thursday,','Friday,','Saturday,'];
+return days[d.getDay()]+' '+months[d.getMonth()]+' '+d.getDate()+'. '+d.getFullYear();
 }
    </script>
 
@@ -290,14 +290,15 @@ return days[d.getDay()]+' '+months[d.getMonth()]+' '+d.getDate()+' '+d.getFullYe
 
          <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
 
-        <div class="btn">
-        <?php include('login.php') ?>
-        <font size="6" color="black"><form action="login.php" method="POST">
-        <input type="submit" value = "   Log In   ">
-            </form></font></div>
+
+               <li class="list-inline-item">
+                  <a href="./login.php" target="_blank">
+                  <i class="fas fa-file-alt" aria-hidden="true"></i>
+                  </a>
+               </li>
+            
 <br> <br>
             <div class="btn">
-            <?php include('register.php') ?>
         <font color="black" size="6"><form action="register.php" method="POST">
         <input type="submit" value = " Sign Up ">
             </form></font></div>
